@@ -1,11 +1,12 @@
-import React from "react";
-import axios from "axios";
+import React, {useState, useEffect} from "react";
+// import axios from "axios";
 import Dropdown from "react-dropdown";
 import parse from "html-react-parser";
 import { formatSeasons } from "./utils/formatSeasons";
 import Episodes from "./components/Episodes";
 import "./styles.css";
 import { fetchShow } from "./api/fetchShow";
+
 export default function App() {
   const [show, setShow] = useState(null);
   const [seasons, setSeasons] = useState([]);
